@@ -13,14 +13,19 @@ cmd , enter
 ──────────────────────────────
 
 Importações e configuração inicial
+
 ──────────────────────────────
+
 • No início, importamos as bibliotecas necessárias:
  - A biblioteca padrão tkinter (importada como tk) serve para criar a interface gráfica.
  - Do módulo tkinter, é importado o ttk, que fornece widgets com um estilo moderno, e também importamos o ttkbootstrap, que permite usar temas pré-definidos (por exemplo, "darkly").
 Essas importações garantem que possamos criar e configurar os diversos elementos da nossa interface.
 ──────────────────────────────
+
 2. Função convert():
+
 ──────────────────────────────
+
 Essa função é responsável por realizar a conversão de distâncias. Dentro dela, temos os seguintes passos:
 
  a) Conversão do valor de entrada
@@ -55,7 +60,9 @@ Essa função é responsável por realizar a conversão de distâncias. Dentro d
   - No caso de a conversão do valor de entrada falhar (por exemplo, se o usuário digitar texto em vez de número), o bloco except é executado e output_string recebe a mensagem "Digite um número válido!".
 
 ──────────────────────────────
+
 3. Configuração da janela principal
+
 ──────────────────────────────
 • A janela principal é criada com:
   window = ttk.Window(themename="darkly")
@@ -63,8 +70,11 @@ Essa função é responsável por realizar a conversão de distâncias. Dentro d
 • Em seguida, o título da janela e seu tamanho são configurados com window.title() e window.geometry(), respectivamente, definindo, por exemplo, uma largura de 520 pixels e altura de 380 pixels.
 
 ──────────────────────────────
+
 4. Criação dos widgets da interface
+
 ──────────────────────────────
+
 • Label principal (título)
  - label = ttk.Label(..., text="Conversor de distancia", ...)
  Este widget exibe o título da aplicação no topo da janela com uma fonte maior ("Calibri", 26, negrito).
@@ -86,8 +96,11 @@ Essa função é responsável por realizar a conversão de distâncias. Dentro d
  - output_label é o Label que exibe a mensagem contida em output_string, comunicando ao usuário o resultado da operação.
 
 ──────────────────────────────
+
 5. Organização dos widgets na janela
+
 ──────────────────────────────
+
 • Cada widget é adicionado à janela utilizando o método pack(), que organiza os elementos em blocos:
  - Primeiro, o label principal (título) é packado no topo com espaçamentos (padx e pady).
  - Em seguida, o combo_frame é packado para exibir os comboboxes e a seta, organizados horizontalmente (usando side=tk.LEFT).
@@ -95,13 +108,19 @@ Essa função é responsável por realizar a conversão de distâncias. Dentro d
 Essa organização define a ordem visual dos elementos na aplicação.
 
 ──────────────────────────────
+
 6. Loop principal da aplicação
+
 ──────────────────────────────
+
 • A linha window.mainloop() inicia o laço de eventos da interface gráfica, mantendo a janela aberta e pronta para interagir com o usuário. Sem esse loop, a janela seria exibida e imediatamente fechada.
 
 ──────────────────────────────
+
 Resumo Final
+
 ──────────────────────────────
+
 O código cria uma interface completa para converter valores de uma unidade de distância para outra. Cada elemento do código tem um papel específico:
  - modelo_distancia define as opções de unidades para que o usuário escolha.
  - conversion_factors é um dicionário usado para converter qualquer valor para metros – uma base comum para todas as conversões.
